@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Math Tug of War</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Launch Screen -->
+    <div id="launch-screen" class="screen active">
+      <div class="content-wrapper">
+        <h1 class="logo">Math<br><span>Tug of War</span></h1>
+        <button id="start-btn" class="primary-btn pulse-anim">Start 1v1</button>
+      </div>
+    </div>
+
+    <!-- Mode Selection -->
+    <div id="mode-selection" class="screen">
+      <div class="content-wrapper">
+        <h2 class="title">Select Mode</h2>
+        <button id="mode-1v1-btn" class="primary-btn">1 vs 1</button>
+      </div>
+    </div>
+
+    <!-- Countdown Screen -->
+    <div id="countdown-screen" class="screen">
+      <div class="content-wrapper">
+        <div id="countdown-text" class="huge-text scale-anim">3</div>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      
+      <!-- Top Player Area -->
+      <div class="player-area top-player" id="player1-area" data-player="1">
+        <div class="header-indicator">Player 1 (Top)</div>
+        <div class="question-container">
+          <div class="question-box" id="p1-question">--</div>
+          <div class="answer-preview" id="p1-preview">?</div>
+        </div>
+        <div class="keypad" id="p1-keypad"></div>
+      </div>
+
+      <!-- Tug of War Area -->
+      <div class="tug-area">
+        <div class="rope-vertical">
+          <div class="rope-line"></div>
+          <div class="knot" id="knot"></div>
+        </div>
+        <!-- P1 Team -->
+        <div class="team team-p1" id="team-p1">
+          <div class="avatar bg-red slide-anim"></div>
+          <div class="avatar bg-orange slide-anim" style="animation-delay: 0.1s;"></div>
+        </div>
+        <!-- Center line -->
+        <div class="center-line"></div>
+        <!-- P2 Team -->
+        <div class="team team-p2" id="team-p2">
+          <div class="avatar bg-blue slide-anim"></div>
+          <div class="avatar bg-cyan slide-anim" style="animation-delay: 0.1s;"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Player Area -->
+      <div class="player-area bottom-player" id="player2-area" data-player="2">
+        <div class="header-indicator">Player 2 (Bottom)</div>
+        <div class="question-container">
+          <div class="question-box" id="p2-question">--</div>
+          <div class="answer-preview" id="p2-preview">?</div>
+        </div>
+        <div class="keypad" id="p2-keypad"></div>
+      </div>
+
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen">
+      <div class="content-wrapper">
+        <h2 id="winner-text" class="title bounce-anim">Player 1 Wins!</h2>
+        <button id="play-again-btn" class="primary-btn">Play Again</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
