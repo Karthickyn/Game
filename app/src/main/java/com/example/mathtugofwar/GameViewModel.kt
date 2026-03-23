@@ -32,6 +32,10 @@ class GameViewModel : ViewModel() {
         _uiState.update { it.copy(appMode = mode) }
     }
 
+    fun startCountdown() {
+        _uiState.update { it.copy(appMode = "COUNTDOWN") }
+    }
+
     fun startGamePlay() {
         val q1 = generateMathQuestion()
         var q2 = generateMathQuestion()
